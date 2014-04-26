@@ -39,7 +39,15 @@ namespace ProjectToBeTested
 
    public class IsOne : Interface_One
    {
-      public int m_num = 111;
+      private int m_num = 111;
+
+      public IsOne() : this(111)
+      {
+      }
+      public IsOne(int init)
+      {
+         m_num = init;
+      }
 
       public bool DoSth1(int check)
       {

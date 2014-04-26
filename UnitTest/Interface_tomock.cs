@@ -12,8 +12,4 @@ namespace ProjectToBeTested
       int Num { get; set; }
    }
 
-   public interface Interface_Two
-   {
-      int DoSth2();
-   }
 }
