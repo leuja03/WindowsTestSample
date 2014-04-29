@@ -9,6 +9,7 @@ namespace UnitTestProject1
    [TestClass]
    public class UnitTest1
    {
+      [TestCategory("interface")]
       [TestMethod]
       public void Test_BeTested_Mock_InterfaceOne()
       {
