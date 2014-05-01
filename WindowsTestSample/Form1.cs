@@ -21,6 +21,8 @@ namespace WindowsTestSample
 
         private void button1_Click(object sender, EventArgs e)
         {
+           string result = Test_StaticClass_AltWay.WhatToGet();
+
            TestFactory();
 
             List<string> thisList = new List<string>();
