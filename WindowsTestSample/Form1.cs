@@ -29,6 +29,10 @@ namespace WindowsTestSample
            Check_Bits.DoTest();
 
            Check_Inheritance.DoTest();
+
+           Check_Unicode.DoTest();
+
+           Check_ListCast.DoTest();
         }
     }
 }

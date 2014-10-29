@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Check_ListCast.cs" />
+    <Compile Include="Check_Unicode.cs" />
     <Compile Include="Check_Bits.cs" />
     <Compile Include="Check_Inheritance.cs" />
     <Compile Include="Check_Regex.cs" />
