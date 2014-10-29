@@ -8,7 +8,12 @@ namespace WindowsTestSample
 {
    public class Test_StaticClass_AltWay
    {
-      public static string WhatToGet()
+      public static void DoTest()
+      {
+         string result = GetString();
+      }
+
+      private static string GetString()
       {
          string testC1 = C1.Instance.WriteLine();
          return testC1;

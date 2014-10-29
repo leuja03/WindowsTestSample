@@ -45,6 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Check_Bits.cs" />
+    <Compile Include="Check_Inheritance.cs" />
+    <Compile Include="Check_Regex.cs" />
+    <Compile Include="Check_Url.cs" />
     <Compile Include="Factory_CreateOneByOne.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -54,7 +58,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StaticClass_AltWay.cs" />
+    <Compile Include="Check_StaticClass_AltWay.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
