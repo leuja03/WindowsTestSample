@@ -79,6 +79,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Check_Linq\Check_Linq.csproj">
+      <Project>{e5550d78-867a-48fa-9277-45351fd28e08}</Project>
+      <Name>Check_Linq</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MiscTest\MiscTest.csproj">
       <Project>{33e4eec3-aca7-4911-abed-b730ae634290}</Project>
       <Name>MiscTest</Name>

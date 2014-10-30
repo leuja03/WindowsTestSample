@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{33E4EEC3-ACA7-4911-ABED-B730AE634290}</ProjectGuid>
+    <ProjectGuid>{E5550D78-867A-48FA-9277-45351FD28E08}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MiscTest</RootNamespace>
-    <AssemblyName>MiscTest</AssemblyName>
+    <RootNamespace>Check_Linq</RootNamespace>
+    <AssemblyName>Check_Linq</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -32,7 +32,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -40,15 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Check_Bits.cs" />
-    <Compile Include="Check_Defaults.cs" />
-    <Compile Include="Check_Factory_CreateOneByOne.cs" />
-    <Compile Include="Check_Inheritance.cs" />
-    <Compile Include="Check_ListCast.cs" />
-    <Compile Include="Check_Regex.cs" />
-    <Compile Include="Check_StaticClass_AltWay.cs" />
-    <Compile Include="Check_Unicode.cs" />
-    <Compile Include="Check_url.cs" />
+    <Compile Include="GetChildListToParentList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

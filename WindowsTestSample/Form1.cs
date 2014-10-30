@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using MiscTest;
-
+using Check_Linq;
 
 namespace WindowsTestSample
 {
@@ -36,6 +36,10 @@ namespace WindowsTestSample
            Check_Unicode.DoTest();
 
            Check_ListCast.DoTest();
+
+           CheckDefaultTest.DoTest();
+
+           GetChildListToParentList.DoTest();
         }
     }
 }
