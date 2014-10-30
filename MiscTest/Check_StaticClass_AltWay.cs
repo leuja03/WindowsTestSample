@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsTestSample
+namespace MiscTest
 {
    public class Test_StaticClass_AltWay
    {

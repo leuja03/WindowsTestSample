@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace WindowsTestSample
+
+namespace MiscTest
 {
    public class Check_Url
    {

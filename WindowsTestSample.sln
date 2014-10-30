@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectToBeTested", "UnitTest\ProjectToBeTested.csproj", "{43EEC9C3-A218-4E4E-B278-EC0B56C1EEC1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiscTest", "MiscTest\MiscTest.csproj", "{33E4EEC3-ACA7-4911-ABED-B730AE634290}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Check_Moq_UnitTest", "Check_Moq_UnitTest", "{4FE0B2BB-13FB-4555-9859-0FCC9C4EA0E8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,8 +29,16 @@ Global
 		{43EEC9C3-A218-4E4E-B278-EC0B56C1EEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{43EEC9C3-A218-4E4E-B278-EC0B56C1EEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{43EEC9C3-A218-4E4E-B278-EC0B56C1EEC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E4EEC3-ACA7-4911-ABED-B730AE634290}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E4EEC3-ACA7-4911-ABED-B730AE634290}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E4EEC3-ACA7-4911-ABED-B730AE634290}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E4EEC3-ACA7-4911-ABED-B730AE634290}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{43EEC9C3-A218-4E4E-B278-EC0B56C1EEC1} = {4FE0B2BB-13FB-4555-9859-0FCC9C4EA0E8}
+		{061AF134-FE6E-486A-9663-F75CF3B5D04E} = {4FE0B2BB-13FB-4555-9859-0FCC9C4EA0E8}
 	EndGlobalSection
 EndGlobal

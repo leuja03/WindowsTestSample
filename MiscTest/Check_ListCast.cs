@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace WindowsTestSample
+namespace MiscTest
 {
-   class Check_ListCast
+   public class Check_ListCast
    {
       public static void DoTest()
       {

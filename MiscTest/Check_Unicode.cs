@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsTestSample
+namespace MiscTest
 {
-   class Check_Unicode
+   public class Check_Unicode
    {
       public static void DoTest()
       {
