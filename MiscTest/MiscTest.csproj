@@ -42,13 +42,18 @@
   <ItemGroup>
     <Compile Include="Check_Bits.cs" />
     <Compile Include="Check_Defaults.cs" />
+    <Compile Include="Check_Enum.cs" />
     <Compile Include="Check_Factory_CreateOneByOne.cs" />
     <Compile Include="Check_Inheritance.cs" />
     <Compile Include="Check_ListCast.cs" />
+    <Compile Include="Check_Ping.cs" />
     <Compile Include="Check_Regex.cs" />
+    <Compile Include="Check_Resource_Exception.cs" />
     <Compile Include="Check_StaticClass_AltWay.cs" />
     <Compile Include="Check_Unicode.cs" />
     <Compile Include="Check_url.cs" />
+    <Compile Include="Check_XML.cs" />
+    <Compile Include="Create_DummyFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

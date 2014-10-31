@@ -16,10 +16,11 @@ namespace MiscTest
 
       private static void TestRegex()
       {
-         string req = @"^(1|2)$";
+         string req = string.Empty;
+         bool regexResult = false;
 
          // country
-         bool
+         req = @"^(1|2)$";
          regexResult = Regex.IsMatch("1", req, RegexOptions.IgnoreCase);
          regexResult = Regex.IsMatch("2", req, RegexOptions.IgnoreCase);
          regexResult = Regex.IsMatch("3", req, RegexOptions.IgnoreCase);
@@ -48,6 +49,55 @@ namespace MiscTest
          // version
          req = @"^[0-9]{6}$";
          regexResult = Regex.IsMatch("", req, RegexOptions.IgnoreCase);
+
+         // Test custom range
+         TestCustom();
+
+
+
+         // misc
+         TestMisc();
+      }
+
+      private static void TestCustom()
+      {
+         // only selected list
+         List<string> stringList = new List<string>() { "CA", "US", "XX" };
+         bool listResult = false;
+         foreach (string content in stringList)
+         {
+            listResult = Regex.IsMatch(content, @"^(CA|US)$");
+         }
+
+
+         // Test SIN
+         string testSIN = "123456789";
+         string SIN_requirement = @"^[0-9]+$";
+         listResult = Regex.IsMatch(testSIN, SIN_requirement);
+         testSIN = "123 45678";
+         listResult = Regex.IsMatch(testSIN, SIN_requirement);
+      }
+
+      private static void TestMisc()
+      {
+         string a = "abc123";
+         string b = "333hfdg";
+         string c = "dsafk2343kasdf";
+         string d = "234adfds566dsfa233444";
+         string f = "111 aaa";
+         string g = "bbb 222";
+         var regex = Regex.Match(a, @"\d+");
+         var result = regex.ToString();
+         regex = Regex.Match(b, @"\d+");
+         result = regex.ToString();
+         regex = Regex.Match(c, @"\d+");
+         result = regex.ToString();
+         regex = Regex.Match(d, @"\d+");
+         result = regex.ToString();
+         regex = Regex.Match(f, @"\d+");
+         result = regex.ToString();
+         regex = Regex.Match(g, @"\d+");
+         result = regex.ToString();
       }
 
    }

@@ -42,6 +42,10 @@ namespace WindowsTestSample
            CheckDefaultTest.DoTest();
 
            GetChildListToParentList.DoTest();
+
+           Check_Ping.DoTest();
+
+           Check_Enum.DoTest();
         }
 
     }

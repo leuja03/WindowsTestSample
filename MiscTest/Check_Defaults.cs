@@ -21,9 +21,13 @@ namespace MiscTest
 
          CheckDefault<TestStruct> structs = new CheckDefault<TestStruct>();
          result = structs.Result;
+         result = new TestStruct(1, 2.2, "3", null, null);
+         result = default(TestStruct);
 
          CheckDefault<TestClass> classs = new CheckDefault<TestClass>();
          result = classs.Result;
+
+
       }
    }
 
@@ -39,11 +43,20 @@ namespace MiscTest
 
    public struct TestStruct
    {
-      int First;
-      double Second;
-      string Third;
-      decimal? Fourth;
-      int? Fifth;
+      int First ;
+      double Second ;
+      string Third ;
+      decimal? Fourth ;
+      int? Fifth ;
+
+      public TestStruct(int f1, double s2, string t3, decimal? f4, int? f5)
+      {
+         First = f1;
+         Second = s2;
+         Third = t3;
+         Fourth = f4;
+         Fifth = f5;
+      }
    }
 
    public class TestClass
