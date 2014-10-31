@@ -22,6 +22,8 @@ namespace WindowsTestSample
 
         private void button1_Click(object sender, EventArgs e)
         {
+           m_richTextBox1.Clear();
+
            Check_Regex.DoTest();
 
            Test_StaticClass_AltWay.DoTest();
@@ -41,5 +43,6 @@ namespace WindowsTestSample
 
            GetChildListToParentList.DoTest();
         }
+
     }
 }
