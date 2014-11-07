@@ -44,6 +44,8 @@
     <Compile Include="Check_Defaults.cs" />
     <Compile Include="Check_Enum.cs" />
     <Compile Include="Check_Factory_CreateOneByOne.cs" />
+    <Compile Include="Check_IEnumerable.cs" />
+    <Compile Include="Check_IEnumerable_2.cs" />
     <Compile Include="Check_Inheritance.cs" />
     <Compile Include="Check_ListCast.cs" />
     <Compile Include="Check_Ping.cs" />
