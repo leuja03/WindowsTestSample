@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 using MiscTest;
 using Check_Linq;
+using AnotherLayer;
 
 namespace WindowsTestSample
 {
@@ -23,6 +24,8 @@ namespace WindowsTestSample
         private void button1_Click(object sender, EventArgs e)
         {
            m_richTextBox1.Clear();
+
+           AnotherLayer.AnotherLayer.DoTest();
 
            Check_Regex.DoTest();
 
