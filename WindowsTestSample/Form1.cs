@@ -44,6 +44,7 @@ namespace WindowsTestSample
 
            CheckDefaultTest.DoTest();
 
+           Order.DoTest();
            GetChildListToParentList.DoTest();
 
            Check_Ping.DoTest();
