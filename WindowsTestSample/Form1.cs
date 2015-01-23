@@ -53,6 +53,8 @@ namespace WindowsTestSample
            Check_Enum.DoTest();
 
            RefClass1.DoTest();
+
+           Check_DataTable.DoTest();
         }
 
     }

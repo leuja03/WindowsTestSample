@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Check_Bits.cs" />
+    <Compile Include="Check_DataTable.cs" />
     <Compile Include="Check_Defaults.cs" />
     <Compile Include="Check_Enum.cs" />
     <Compile Include="Check_Factory_CreateOneByOne.cs" />
