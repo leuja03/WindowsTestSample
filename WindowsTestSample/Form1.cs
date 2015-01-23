@@ -50,6 +50,8 @@ namespace WindowsTestSample
            Check_Ping.DoTest();
 
            Check_Enum.DoTest();
+
+           Check_DataTable.DoTest();
         }
 
     }
