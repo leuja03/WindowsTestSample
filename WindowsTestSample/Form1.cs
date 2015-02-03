@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using MiscTest;
 using Check_Linq;
 using AnotherLayer;
-using VC_CLR_Lib;
+//using VC_CLR_Lib;
 
 namespace WindowsTestSample
 {
@@ -52,9 +52,11 @@ namespace WindowsTestSample
 
            Check_Enum.DoTest();
 
-           RefClass1.DoTest();
+           //RefClass1.DoTest();
 
            Check_DataTable.DoTest();
+
+           Check_Reflection.DoTest();
         }
 
     }

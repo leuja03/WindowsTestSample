@@ -91,10 +91,6 @@
       <Project>{33e4eec3-aca7-4911-abed-b730ae634290}</Project>
       <Name>MiscTest</Name>
     </ProjectReference>
-    <ProjectReference Include="..\VC_CLR_Lib\VC_CLR_Lib.vcxproj">
-      <Project>{3b31e3eb-ecd6-47aa-b86a-ccae7a045e15}</Project>
-      <Name>VC_CLR_Lib</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

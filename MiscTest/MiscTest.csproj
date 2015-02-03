@@ -50,6 +50,7 @@
     <Compile Include="Check_Inheritance.cs" />
     <Compile Include="Check_ListCast.cs" />
     <Compile Include="Check_Ping.cs" />
+    <Compile Include="Check_Reflection.cs" />
     <Compile Include="Check_Regex.cs" />
     <Compile Include="Check_Resource_Exception.cs" />
     <Compile Include="Check_StaticClass_AltWay.cs" />
