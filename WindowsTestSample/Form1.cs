@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using MiscTest;
 using Check_Linq;
 using AnotherLayer;
+using Check_Thread;
 //using VC_CLR_Lib;
 
 namespace WindowsTestSample
@@ -57,6 +58,8 @@ namespace WindowsTestSample
            Check_DataTable.DoTest();
 
            Check_Reflection.DoTest();
+
+           Class1.DoTest();
         }
 
     }
