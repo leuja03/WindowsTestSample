@@ -30,6 +30,16 @@ namespace MiscTest
          PropertyInfo[] propInfos1 = t.GetProperties(BindingFlags.NonPublic | BindingFlags.Instance);
          // Display all the nonpublic properties.
          //DisplayPropertyInfo(propInfos1);
+
+         // Get the all fields.
+         FieldInfo[] fieldInfos1 = typeof(FieldClass).GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Instance);
+         // Display all the nonpublic properties.
+         //DisplayPropertyInfo(propInfos1);
+
+         // Get the all fields.
+         FieldInfo[] fieldInfos2 = typeof(StaticMembersClass).GetFields(BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.Static);
+         // Display all the nonpublic properties.
+         //DisplayPropertyInfo(propInfos1);
       }
    }
 
@@ -98,5 +108,25 @@ namespace MiscTest
       {
          get { return "value"; }
       }
+   }
+
+   public class FieldClass
+   {
+      private string m_privateString1 = "string 1";
+      protected string m_protectedString2 = "string 2";
+      internal string m_internalString3 = "string 3";
+      public string m_publicString4 = "string 4";
+
+      public static string m_staticPublicString5 = "string 5";
+   }
+
+   public class StaticMembersClass
+   {
+      private static string m_privateString1 = "string 1";
+      protected static string m_protectedString2 = "string 2";
+      internal static string m_internalString3 = "string 3";
+      public static string m_publicString4 = "string 4";
+
+      public string m_publicString5 = "string 5";
    }
 }
