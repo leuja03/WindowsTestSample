@@ -60,6 +60,8 @@ namespace WindowsTestSample
            Check_Reflection.DoTest();
 
            Class1.DoTest();
+
+           Check_AppConfig_Protection.DoTest();
         }
 
     }
