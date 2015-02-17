@@ -16,7 +16,10 @@ namespace MiscTest
    /// Check etw ~ event tracing for windows
    ///   comment: very fast logging system built into the OS
    /// 
-   /// examples in codeproject:
+   /// examples in microsoft:
+   ///   https://msdn.microsoft.com/en-us/library/dn440729(v=pandp.60).aspx
+   /// 
+   /// examples in codeproject: (similar to that from MS)
    ///   http://www.codeproject.com/Articles/602077/InstrumentationpluswithplusSemanticplusLoggingplus
    /// 
    /// 
