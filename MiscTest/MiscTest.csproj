@@ -33,6 +33,7 @@
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -56,6 +57,7 @@
     <Compile Include="Check_Regex.cs" />
     <Compile Include="Check_Resource_Exception.cs" />
     <Compile Include="Check_StaticClass_AltWay.cs" />
+    <Compile Include="Check_TransactionScope.cs" />
     <Compile Include="Check_Unicode.cs" />
     <Compile Include="Check_url.cs" />
     <Compile Include="Check_XML.cs" />
