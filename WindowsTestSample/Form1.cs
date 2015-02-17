@@ -64,6 +64,8 @@ namespace WindowsTestSample
            Check_AppConfig_Protection.DoTest();
 
            Check_TransactionScope.DoTest();
+
+           Check_EventLog.DoTest();
         }
 
     }
