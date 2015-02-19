@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
@@ -22,7 +23,7 @@ namespace MiscTest
          using (TransactionScope txSc = new TransactionScope())
          {
             vrm = new VolatileRM();
-            vrm.SetMemberValue(3);
+            vrm.MemberValue = 3;
 
             txSc.Complete();
          }
@@ -30,7 +31,6 @@ namespace MiscTest
 
 
          VolatileRM_MyExample vrm_rb = null;
-         // Test rollback
          try
          {
             vrm_rb = new VolatileRM_MyExample();
@@ -38,17 +38,31 @@ namespace MiscTest
             vrm_rb.MemberValue = 777;
             vrm_rb.MemberValue = 555;
 
+            // Test nested transactionscope
             using (TransactionScope txSc = new TransactionScope())
             {
                vrm_rb.MemberValue = 222;
 
+               using (TransactionScope txSc2 = new TransactionScope())
+               {
+                  vrm.MemberValue = 13579;
+                  txSc2.Complete();
+               }
+
                txSc.Complete();
             }
 
+            // Test rollback
             using (TransactionScope txSc = new TransactionScope())
             {
-               //vrm_rb = new VolatileRM_Rollback();
                vrm_rb.MemberValue = 1;
+
+               using (TransactionScope txSc2 = new TransactionScope())
+               {
+                  vrm.MemberValue = 2468;
+
+                  txSc2.Complete();
+               }
 
                ThrowException();
                
@@ -96,11 +110,11 @@ namespace MiscTest
          m_instance = null;
       }
 
-      public void WriteToLog(string sth)
+      public void WriteToLog(string sth, [CallerMemberName]string callingMember = "")
       {
          if (sth == null)
             return;
-         m_log += "\n" + sth;
+         m_log += "\n" + "[" + callingMember + "]:" + sth;
       }
    }
 
@@ -113,21 +127,19 @@ namespace MiscTest
       public int MemberValue
       {
          get { return memberValue; }
-      }
- 
-      public void SetMemberValue(int newMemberValue)
-      {
-         Transaction currentTx = Transaction.Current;
-         if (currentTx != null)
+         set
          {
-            Logger.TheInstance.WriteToLog("VolatileRM: SetMemberValue - EnlistVolatile");
-            currentTx.EnlistVolatile(this, EnlistmentOptions.None);
+            Transaction currentTx = Transaction.Current;
+            if (currentTx != null)
+            {
+               Logger.TheInstance.WriteToLog("VolatileRM: SetMemberValue - EnlistVolatile");
+               currentTx.EnlistVolatile(this, EnlistmentOptions.None);
+            }
+
+            oldMemberValue = memberValue;
+            memberValue = value;
          }
-
-         oldMemberValue = memberValue;
-         memberValue = newMemberValue;
-      }
-
+      } 
 
       #region interface for  IEnlistmentNotification
       public void Commit(Enlistment enlistment)
@@ -165,10 +177,6 @@ namespace MiscTest
       {
          Logger.TheInstance.WriteToLog("VolatileRM: Commit");
 
-         Transaction currentTx = Transaction.Current;
-         if (currentTx != null)
-            currentTx.Rollback(new Exception("what ever happend"));
-
          // Clear out oldMemberValue
          DoCommit();
 
@@ -185,7 +193,7 @@ namespace MiscTest
 
       public void Prepare(PreparingEnlistment preparingEnlistment)
       {
-         Logger.TheInstance.WriteToLog("VolatileRM: Prepare - Force to rollback");
+         Logger.TheInstance.WriteToLog("VolatileRM: Prepare");
          DoPrepare();
 
          preparingEnlistment.Prepared();
@@ -205,6 +213,19 @@ namespace MiscTest
       protected abstract void DoInDoubt();
       protected abstract void DoPrepare();
       protected abstract void DoRollback();
+
+      protected bool InTransactionScope
+      {
+         get
+         {
+            Transaction currentTx = Transaction.Current;
+            // enlist itself
+            if (currentTx != null)
+               currentTx.EnlistVolatile(this, EnlistmentOptions.None);
+
+            return (currentTx != null);
+         }
+      }
    }
 
    internal class VolatileRM_MyExample : AbstractTransactionScope
@@ -212,39 +233,49 @@ namespace MiscTest
       private const int DEFAULT = -999;
       private int memberValue = DEFAULT;
       private int oldMemberValue = DEFAULT;
+      private int newMemberValue = DEFAULT;
       
       public int MemberValue
       {
-         get { return memberValue; }
+         get 
+         {
+            if (InTransactionScope)
+               return newMemberValue;
+            else
+               return memberValue; 
+         }
          set
          {
-            Transaction currentTx = Transaction.Current;
-            if (currentTx != null)
-            {
-               Logger.TheInstance.WriteToLog("VolatileRM: SetMemberValue - EnlistVolatile");
-               currentTx.EnlistVolatile(this, EnlistmentOptions.None);
-            }
+            newMemberValue = value;
 
-            oldMemberValue = memberValue;
-            memberValue = value;
+            if (InTransactionScope)
+            {
+            }
+            else
+            {
+               DoPrepare();
+               DoCommit();
+            }
          }
       }
 
       protected override void DoCommit()
       {
+         memberValue = newMemberValue;
       }
 
       protected override void DoInDoubt()
       {
+         DoRollback();//????
       }
 
       protected override void DoPrepare()
       {
+         oldMemberValue = memberValue;
       }
 
       protected override void DoRollback()
       {
-         memberValue = oldMemberValue;
       }
    }
 
