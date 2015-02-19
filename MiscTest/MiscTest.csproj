@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Check_AppConfig_Protection.cs" />
     <Compile Include="Check_Bits.cs" />
+    <Compile Include="Check_Certificate.cs" />
     <Compile Include="Check_DataTable.cs" />
     <Compile Include="Check_Defaults.cs" />
     <Compile Include="Check_Enum.cs" />

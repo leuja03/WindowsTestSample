@@ -66,6 +66,8 @@ namespace WindowsTestSample
            Check_TransactionScope.DoTest();
 
            Check_EventLog.DoTest();
+
+           Check_Certificate.DoTest();
         }
 
     }
