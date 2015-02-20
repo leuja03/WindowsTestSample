@@ -232,7 +232,6 @@ namespace MiscTest
    {
       private const int DEFAULT = -999;
       private int memberValue = DEFAULT;
-      private int oldMemberValue = DEFAULT;
       private int newMemberValue = DEFAULT;
       
       public int MemberValue
@@ -259,6 +258,10 @@ namespace MiscTest
          }
       }
 
+      public void Add(int num)
+      {
+      }
+
       protected override void DoCommit()
       {
          memberValue = newMemberValue;
@@ -271,7 +274,6 @@ namespace MiscTest
 
       protected override void DoPrepare()
       {
-         oldMemberValue = memberValue;
       }
 
       protected override void DoRollback()
