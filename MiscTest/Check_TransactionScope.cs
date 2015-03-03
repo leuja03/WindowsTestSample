@@ -73,6 +73,38 @@ namespace MiscTest
          {
          }
 
+         // Test Add
+         try
+         {
+            // without scope
+            vrm_rb = new VolatileRM_MyExample();
+            vrm_rb.MemberValue = 10000;
+            vrm_rb.Add(1);
+
+            // in scope
+            using (TransactionScope trans = new TransactionScope())
+            {
+               vrm_rb.MemberValue = 20000;
+               vrm_rb.Add(2);
+
+               trans.Complete();
+            }
+
+            // test rollback in scope
+            using (TransactionScope trans = new TransactionScope())
+            {
+               vrm_rb.MemberValue = 30000;
+               vrm_rb.Add(3);
+
+               ThrowException();
+
+               trans.Complete();
+            }
+         }
+         catch
+         {
+         }
+
 
          Logger.TheInstance.PurgeSingleton();
       }
@@ -231,21 +263,21 @@ namespace MiscTest
    internal class VolatileRM_MyExample : AbstractTransactionScope
    {
       private const int DEFAULT = -999;
-      private int memberValue = DEFAULT;
-      private int newMemberValue = DEFAULT;
+      private int _memberValue = DEFAULT;
+      private int _newMemberValue = DEFAULT;
       
       public int MemberValue
       {
          get 
          {
             if (InTransactionScope)
-               return newMemberValue;
+               return _newMemberValue;
             else
-               return memberValue; 
+               return _memberValue; 
          }
          set
          {
-            newMemberValue = value;
+            _newMemberValue = value;
 
             if (InTransactionScope)
             {
@@ -260,11 +292,12 @@ namespace MiscTest
 
       public void Add(int num)
       {
+         MemberValue += num;
       }
 
       protected override void DoCommit()
       {
-         memberValue = newMemberValue;
+         _memberValue = _newMemberValue;
       }
 
       protected override void DoInDoubt()
