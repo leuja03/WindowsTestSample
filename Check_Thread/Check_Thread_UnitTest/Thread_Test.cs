@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Check_Thread_UnitTest
 {
    [TestClass]
-   public class UnitTest1
+   public class Thread_Test
    {
       [TestMethod]
       public void ShouldUpdateTheStatusWhenDoAsync()

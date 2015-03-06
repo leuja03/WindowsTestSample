@@ -12,6 +12,7 @@ using MiscTest;
 using Check_Linq;
 using AnotherLayer;
 using Check_Thread;
+using Check_EventTracing;
 //using VC_CLR_Lib;
 
 namespace WindowsTestSample
@@ -59,7 +60,7 @@ namespace WindowsTestSample
 
            Check_Reflection.DoTest();
 
-           Class1.DoTest();
+           Thread_Main.DoTest();
 
            Check_AppConfig_Protection.DoTest();
 
@@ -68,6 +69,8 @@ namespace WindowsTestSample
            Check_EventLog.DoTest();
 
            Check_Certificate.DoTest();
+
+           EventTracing_Main.DoTest();
         }
 
     }
