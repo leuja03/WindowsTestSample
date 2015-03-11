@@ -9,10 +9,24 @@ namespace UnitTestProject
    [TestClass]
    public class UnitTestProject_async
    {
+      /// <summary>
+      /// https://msdn.microsoft.com/en-us/magazine/dn818493.aspx
+      /// 
+      /// reference: https://msdn.microsoft.com/en-us/magazine/dn818494.aspx
+      /// </summary>
+      /// <returns></returns>
+      [TestMethod]
+      [TestCategory("async test")]
+      public async Task CorrectlyFailingTest()
+      {
+         await SystemToBeTested.SimpleAsync();
+      }
+
+
       [TestMethod]
       [TestCategory("async test")]
       //[TestProperty("property", "the first async test")]
-      public async void TestAsyncException()
+      public async Task TestAsyncException()
       {
          //Assert.ThrowsException
          await AssertExtensions.ThrowsExceptionAsync<ArgumentException>
@@ -21,11 +35,12 @@ namespace UnitTestProject
                {
                   await Task.Run(() =>
                      {
-                        throw new Exception("try this exception");
+                        throw new Exception("try this async exception");
                      });
             }
          );
       }
+
 
       [TestMethod]
       [TestCategory("general exception test")]
@@ -33,7 +48,7 @@ namespace UnitTestProject
       {
          AssertExtensions.ThrowsExceptionAsync<NullReferenceException>
             (
-            () => { throw new NullReferenceException("try this null exception"); }
+            () => { throw new NullReferenceException("try this regular exception"); }
             );
       }
    }

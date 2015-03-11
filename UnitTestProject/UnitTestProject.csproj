@@ -50,6 +50,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="SystemToBeTested.cs" />
     <Compile Include="UnitTestProject_async.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
