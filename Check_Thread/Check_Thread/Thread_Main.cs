@@ -21,26 +21,11 @@ namespace Check_Thread
           DoOthers();
        }
 
+       /// <summary>
+       /// some empty functions... just to check if this is called after await
+       /// </summary>
        private static void DoOthers()
        {
        }
     }
-
-    public class CallAyncClass
-    {
-       public async void EnterThisClass()
-       {
-          await AsyncTask.SaySomething();
-
-          DoOthers();
-       }
-
-       private void DoOthers()
-       {
-          int abc = 10;
-          abc += 100;
-          Thread_Main.CommonResource += abc.ToString();
-       }
-    }
-
  }
