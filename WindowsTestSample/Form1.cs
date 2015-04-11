@@ -50,7 +50,8 @@ namespace WindowsTestSample
            Order.DoTest();
            GetChildListToParentList.DoTest();
 
-           Check_Ping.DoTest();
+           // comment out because it takes too long to run
+           //Check_Ping.DoTest();
 
            Check_Enum.DoTest();
 
