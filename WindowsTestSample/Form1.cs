@@ -30,6 +30,9 @@ namespace WindowsTestSample
 
            AnotherLayer.AnotherLayer.DoTest();
 
+           Check_Json.DoTest();
+           Check_XML.DoTest();
+
            Check_Regex.DoTest();
 
            Test_StaticClass_AltWay.DoTest();
