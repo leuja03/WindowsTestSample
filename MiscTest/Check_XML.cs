@@ -19,7 +19,7 @@ namespace MiscTest
          //ExportXml();
 
          // parse xml file
-         ParseXml();
+         //ParseXml();
       }
 
       private static void ParseXml()

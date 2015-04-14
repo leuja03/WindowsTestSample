@@ -24,9 +24,12 @@ namespace MiscTest
          {
             string json = reader.ReadToEnd();
             dynamic objectList = JsonConvert.DeserializeObject(json);
-            foreach (var item in objectList)
+            if (objectList != null)
             {
-               
+               foreach (var item in objectList)
+               {
+
+               }
             }
          }
       }
