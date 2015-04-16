@@ -37,6 +37,18 @@ namespace MiscTest
                          }).ToList();
       }
 
+      private static void ExportXml2(List<object> dataList)
+      {
+         //List<ThresholdData> converted = ConvertTo(dataList);
+         string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "forecast_attributes.xml";
+         string tryFile = filePath;
+         using (StreamWriter writer = new StreamWriter(tryFile, false, Encoding.Unicode))
+         {
+            XmlSerializer serializer = new XmlSerializer(typeof(List<object>), new XmlRootAttribute("thresholds"));
+            serializer.Serialize(writer, dataList);
+         }
+      }
+
       private static void ExportXml()
       {
          string outputPath = @"F:\__Simply DBs__\2014\cdn\Manulife\test.xml";
