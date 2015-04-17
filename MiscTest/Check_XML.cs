@@ -20,6 +20,12 @@ namespace MiscTest
 
          // parse xml file
          //ParseXml();
+         ForecastXmlData xmlData = new ForecastXmlData();
+         xmlData.data = new List<ForecastData>();
+         xmlData.data.Add(new ForecastData() { Name = "current", Temperature = "15", Unit = "c", High = "20", Low = "10", Humidity = "70" });
+         xmlData.data.Add(new ForecastData() { Name = "monday", Temperature = "16", Unit = "c", High = "21", Low = "11", Humidity = "65" });
+         xmlData.data.Add(new ForecastData() { Name = "tuesday", Temperature = "17", Unit = "c", High = "22", Low = "12", Humidity = "61" });
+         ExportXml2(xmlData);
       }
 
       private static void ParseXml()
@@ -37,14 +43,37 @@ namespace MiscTest
                          }).ToList();
       }
 
-      private static void ExportXml2(List<object> dataList)
+      [XmlRootAttribute("forecast")]
+      public class ForecastXmlData
+      {
+         [XmlElement("day")]
+         public List<ForecastData> data;
+      }
+      [XmlRootAttribute("day")]
+      public class ForecastData
+      {
+         [XmlAttribute("name")]
+         public string Name;
+         [XmlAttribute("temperature")]
+         public string Temperature;
+         [XmlAttribute("degree")]
+         public string Unit;
+         [XmlAttribute("high")]
+         public string High;
+         [XmlAttribute("low")]
+         public string Low;
+         [XmlAttribute("humidity")]
+         public string Humidity;
+      }
+
+      private static void ExportXml2(ForecastXmlData dataList)
       {
          //List<ThresholdData> converted = ConvertTo(dataList);
-         string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "forecast_attributes.xml";
+         string filePath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\" + "forecast_attributes22.xml";
          string tryFile = filePath;
          using (StreamWriter writer = new StreamWriter(tryFile, false, Encoding.Unicode))
          {
-            XmlSerializer serializer = new XmlSerializer(typeof(List<object>), new XmlRootAttribute("thresholds"));
+            XmlSerializer serializer = new XmlSerializer(typeof(ForecastXmlData));
             serializer.Serialize(writer, dataList);
          }
       }
