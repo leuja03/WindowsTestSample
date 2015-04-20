@@ -13,6 +13,7 @@ using Check_Linq;
 using AnotherLayer;
 using Check_Thread;
 using Check_EventTracing;
+using Design_Pattern;
 //using VC_CLR_Lib;
 
 namespace WindowsTestSample
@@ -27,6 +28,8 @@ namespace WindowsTestSample
         private void button1_Click(object sender, EventArgs e)
         {
            m_richTextBox1.Clear();
+
+           Entry_Main.DoTest();
 
            AnotherLayer.AnotherLayer.DoTest();
 

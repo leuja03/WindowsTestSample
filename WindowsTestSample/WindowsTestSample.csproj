@@ -95,6 +95,10 @@
       <Project>{a2a03d2e-f488-480a-8cb0-041c3d5b56f4}</Project>
       <Name>Check_Thread</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Design_Pattern\Design_Pattern.csproj">
+      <Project>{217e543c-b3f8-487d-91de-561a27bf0320}</Project>
+      <Name>Design_Pattern</Name>
+    </ProjectReference>
     <ProjectReference Include="..\MiscTest\MiscTest.csproj">
       <Project>{33e4eec3-aca7-4911-abed-b730ae634290}</Project>
       <Name>MiscTest</Name>

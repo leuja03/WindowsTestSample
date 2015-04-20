@@ -40,6 +40,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", 
 		ThirdParty\Newtonsoft.Json.dll = ThirdParty\Newtonsoft.Json.dll
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design_Pattern", "Design_Pattern\Design_Pattern.csproj", "{217E543C-B3F8-487D-91DE-561A27BF0320}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -190,6 +192,16 @@ Global
 		{FF5BB378-564D-420B-A970-AB65E6BDD66B}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{FF5BB378-564D-420B-A970-AB65E6BDD66B}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{FF5BB378-564D-420B-A970-AB65E6BDD66B}.Release|Win32.ActiveCfg = Release|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
