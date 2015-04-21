@@ -42,6 +42,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design_Pattern", "Design_Pattern\Design_Pattern.csproj", "{217E543C-B3F8-487D-91DE-561A27BF0320}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Check_IOC", "Check_IOC\Check_IOC.csproj", "{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -202,6 +204,16 @@ Global
 		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{217E543C-B3F8-487D-91DE-561A27BF0320}.Release|Win32.ActiveCfg = Release|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Debug|Win32.ActiveCfg = Debug|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}.Release|Win32.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -216,5 +228,8 @@ Global
 		{28497194-D424-4C96-AF48-3A417204C3E6} = {32E9E1B9-CEBF-43C3-9154-00A673E8DBA3}
 		{A2A03D2E-F488-480A-8CB0-041C3D5B56F4} = {7EFBD69D-EAD9-425E-9929-A5FB9B4C1608}
 		{97D1D4F6-9EC1-46CC-8289-CB3F1A46FC36} = {7EFBD69D-EAD9-425E-9929-A5FB9B4C1608}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal
