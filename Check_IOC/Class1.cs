@@ -5,7 +5,11 @@ using System.Text;
 
 namespace Check_IOC
 {
-    public class Class1
-    {
-    }
+   /// <summary>
+   /// 
+   /// https://msdn.microsoft.com/en-us/library/ff647202.aspx
+   /// </summary>
+   public class Class1
+   {
+   }
 }
