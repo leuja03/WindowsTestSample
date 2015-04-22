@@ -10,7 +10,9 @@ namespace Design_Pattern
     {
        public static void DoTest()
        {
-          Singleton_ThreadSafeFast.Instance.DoSomething();
+          Singleton_FullLazy.Instance.DoSomething();
+
+          Singleton_MSLazyType.Instance.DoSomething();
        }
     }
 }
