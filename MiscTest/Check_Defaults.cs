@@ -70,6 +70,11 @@ namespace MiscTest
       string Third ;
       decimal? Fourth ;
       int? Fifth ;
+      // cannot initialize field in struct
+      //int No_Initializer = 1;
+
+      // Cannot define a parameterless constructor/default constructor
+      //public TestStruct() {}
 
       public TestStruct(int f1, double s2, string t3, decimal? f4, int? f5)
       {
