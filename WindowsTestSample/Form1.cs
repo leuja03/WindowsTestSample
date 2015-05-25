@@ -14,6 +14,7 @@ using AnotherLayer;
 using Check_Thread;
 using Check_EventTracing;
 using Design_Pattern;
+using Check_IOC;
 //using VC_CLR_Lib;
 
 namespace WindowsTestSample
@@ -29,6 +30,7 @@ namespace WindowsTestSample
         {
            m_richTextBox1.Clear();
 
+           IOC_Main.DoTest();
            Entry_Main.DoTest();
 
            AnotherLayer.AnotherLayer.DoTest();

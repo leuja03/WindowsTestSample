@@ -87,6 +87,10 @@
       <Project>{520ff27c-7771-48aa-9f99-71a846e9486b}</Project>
       <Name>Check_EventTracing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Check_IOC\Check_IOC.csproj">
+      <Project>{0fa0cb53-0a9a-436d-b4ca-7adfa1282395}</Project>
+      <Name>Check_IOC</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Check_Linq\Check_Linq.csproj">
       <Project>{e5550d78-867a-48fa-9277-45351fd28e08}</Project>
       <Name>Check_Linq</Name>
