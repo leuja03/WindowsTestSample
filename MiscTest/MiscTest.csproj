@@ -66,6 +66,7 @@
     <Compile Include="Check_TransactionScope.cs" />
     <Compile Include="Check_Unicode.cs" />
     <Compile Include="Check_url.cs" />
+    <Compile Include="Check_WindowsEventLog.cs" />
     <Compile Include="Check_XML.cs" />
     <Compile Include="Create_DummyFiles.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
