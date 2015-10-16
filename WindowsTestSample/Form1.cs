@@ -30,6 +30,7 @@ namespace WindowsTestSample
         {
            m_richTextBox1.Clear();
 
+           Check_WindowsEventLog.DoTest();
            IOC_Main.DoTest();
            Entry_Main.DoTest();
 
