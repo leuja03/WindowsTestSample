@@ -33,11 +33,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Check_EventTracing", "Check
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "UnitTestProject\UnitTestProject.csproj", "{FF5BB378-564D-420B-A970-AB65E6BDD66B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ThirdParty", "ThirdParty", "{3AB212A2-FF7C-4B08-96DA-F3821492B502}"
-	ProjectSection(SolutionItems) = preProject
-		ThirdParty\Newtonsoft.Json.dll = ThirdParty\Newtonsoft.Json.dll
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Design_Pattern", "Design_Pattern\Design_Pattern.csproj", "{217E543C-B3F8-487D-91DE-561A27BF0320}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Check_IOC", "Check_IOC\Check_IOC.csproj", "{0FA0CB53-0A9A-436D-B4CA-7ADFA1282395}"
