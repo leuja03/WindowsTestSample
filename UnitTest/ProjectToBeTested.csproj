@@ -40,6 +40,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interface_tomock.cs" />
+    <Compile Include="LocalFileSystem\EmployeeData.cs" />
+    <Compile Include="LocalFileSystem\FileSystemRepository.cs" />
+    <Compile Include="LocalFileSystem\IFileSystemRepository.cs" />
     <Compile Include="ProjectToBeTested.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
