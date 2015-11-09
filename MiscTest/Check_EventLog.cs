@@ -32,13 +32,16 @@ namespace MiscTest
       {
          var res = CheckName("abc");
 
+         // check sth
+         res = CheckName();
       }
 
-      private static string CheckName(string name, [CallerMemberName]string callingMember = "", [CallerFilePath]string callingFilePath = "", [CallerLineNumber]int callingLineNumber = 0)
+      private static string CheckName(string param = "", [CallerMemberName]string callingMember = "", [CallerFilePath]string callingFilePath = "", [CallerLineNumber]int callingLineNumber = 0)
       {
          return 
-            "Caller Member name: " + name + "\n" +
-            "Caller File path: " + callingMember + "\n" +
+            "Parameter: " + param + "\n" +
+            "Caller Member name: " + callingMember + "\n" +
+            "Caller File path: " + callingFilePath + "\n" +
             "Caller Line number: " + callingLineNumber.ToString() + "\n";
       }
    }
