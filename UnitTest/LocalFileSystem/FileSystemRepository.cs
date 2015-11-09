@@ -8,6 +8,10 @@ using System.Xml.Serialization;
 
 namespace UnitTest.LocalFileSystem
 {
+   /// <summary>
+   /// Check this for reference:
+   ///   https://visualstudiomagazine.com/articles/2011/02/16/unit-testing-in-c-sharp.aspx
+   /// </summary>
    public class FileSystemRepository : IFileSystemRepository
    {
       private readonly string _Filename;

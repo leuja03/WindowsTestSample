@@ -8,6 +8,10 @@ namespace UnitTestProject1.LocalFileSystem
    [TestClass]
    public class FileSystemUnitTest
    {
+      /// <summary>
+      /// Check this:
+      ///   https://visualstudiomagazine.com/articles/2011/02/16/unit-testing-in-c-sharp.aspx
+      /// </summary>
       [TestMethod]
       [TestCategory("FileSystem")]
       public void TestMethod1()
