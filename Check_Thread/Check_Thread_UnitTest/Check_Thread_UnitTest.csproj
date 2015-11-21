@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Thread_Test.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Async_Test.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Check_Thread\Check_Thread.csproj">

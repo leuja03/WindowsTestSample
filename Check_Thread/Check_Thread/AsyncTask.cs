@@ -24,11 +24,22 @@ namespace Check_Thread
 
    public class CallAyncClass
    {
-      public async void EnterThisClass()
+      public async Task EnterThisClass()
       {
          await AsyncTask.SaySomething();
 
+         await SaySomethingElse();
+
          DoOthers();
+      }
+
+      public async Task<string> SaySomethingElse()
+      {
+         await Task.Delay(100);
+
+         Thread_Main.CommonResource = "In <SaySomethingElse()>, doing sth...";
+
+         return "something else";
       }
 
       /// <summary>
