@@ -39,6 +39,10 @@ namespace MiscTest
             vrm_rb.MemberValue = 555;
 
             // Test nested transactionscope
+            //
+            // vrm's current value = 3
+            // vrm_rb's current value = 555
+            // 
             using (TransactionScope txSc = new TransactionScope())
             {
                vrm_rb.MemberValue = 222;
@@ -53,25 +57,60 @@ namespace MiscTest
             }
 
             // Test rollback
+            //
+            // vrm's current value = 13579
+            // vrm_rb's current value = 222
+            // 
             using (TransactionScope txSc = new TransactionScope())
             {
+               vrm.MemberValue = 11122;
                vrm_rb.MemberValue = 1;
 
+               // At this point, 
+               //    vrm's current value = 11122
+               //    vrm_rb's current value = 1
+               //
                using (TransactionScope txSc2 = new TransactionScope())
                {
                   vrm.MemberValue = 2468;
+                  vrm_rb.MemberValue = 22;
 
+                  // At this point, 
+                  //    vrm's current value = 2468
+                  //    vrm_rb's current value = 22
+                  //
                   txSc2.Complete();
+
+                  // At this point, 
+                  //    vrm's current value = 2468
+                  //    vrm_rb's current value = 22
+                  //
                }
 
+               // At this point, 
+               //    vrm's current value = 2468
+               //    vrm_rb's current value = 22
+               //
                ThrowException();
-               
+
+               // At this point, cannot come to here N/A
                txSc.Complete();
             }
+            // At this point, cannot reach here, N/A
          }
          catch
          {
          }
+         // At this point, 
+         //    expected: 
+         //    vrm's current value = 13579
+         //    vrm_rb's current value = 222
+         // what found out is:
+         //    vrm's current value = 0
+         //    vrm_rb's current value = 222
+         //
+
+
 
          // Test Add
          try
